@@ -1,0 +1,6 @@
+{
+  "region": "eu-west-1",
+  "resourcesStackName": "zorgkaart-development-r",
+  "iamRoleArnLambda": "arn:aws:iam::312718140229:role/zorgkaart-development-r-IamRoleLambda-1KZEGM94ID7KG",
+  "apiGatewayApi": "zorgkaart"
+}

@@ -1,0 +1,86 @@
+{
+  "name": "merge",
+  "runtime": "nodejs",
+  "description": "Serverless Lambda function for project: zorgkaart",
+  "customName": false,
+  "customRole": false,
+  "handler": "regions/merge/handler.handler",
+  "timeout": 10,
+  "memorySize": 1536,
+  "authorizer": {},
+  "custom": {
+    "excludePatterns": []
+  },
+  "endpoints": [
+    {
+      "path": "regions/merge",
+      "method": "GET",
+      "type": "AWS",
+      "authorizationType": "none",
+      "authorizerFunction": false,
+      "apiKeyRequired": false,
+      "requestParameters": {},
+      "requestTemplates": {
+        "application/json": ""
+      },
+      "responses": {
+        "400": {
+          "statusCode": "400"
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,Cache-Control'",
+            "method.response.header.Access-Control-Allow-Methods": "'*'",
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          },
+          "responseModels": {},
+          "responseTemplates": {
+            "application/json": ""
+          }
+        }
+      }
+    },
+    {
+      "path": "regions/merge",
+      "method": "OPTIONS",
+      "type": "AWS",
+      "authorizationType": "none",
+      "authorizerFunction": false,
+      "apiKeyRequired": false,
+      "requestParameters": {},
+      "requestTemplates": {
+        "application/json": {
+          "regions" : "$input.params('regions')"
+        }
+      },
+      "responses": {
+        "400": {
+          "statusCode": "400"
+        },
+        "default": {
+          "statusCode": "200",
+          "responseParameters": {
+            "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,Cache-Control'",
+            "method.response.header.Access-Control-Allow-Methods": "'*'",
+            "method.response.header.Access-Control-Allow-Origin": "'*'"
+          },
+          "responseModels": {},
+          "responseTemplates": {
+            "application/json": ""
+          }
+        }
+      }
+    }
+  ],
+  "events": [],
+  "environment": {
+    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_STAGE": "${stage}",
+    "SERVERLESS_REGION": "${region}"
+  },
+  "vpc": {
+    "securityGroupIds": [],
+    "subnetIds": []
+  }
+}

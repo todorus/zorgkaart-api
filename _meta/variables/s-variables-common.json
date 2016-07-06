@@ -1,0 +1,6 @@
+{
+  "project": "zorgkaart",
+  "projectBucket": "serverless.eu-west-1.zorgkaart.todorus.com",
+  "domain": "zorgkaart.todorus.com",
+  "notificationEmail": "todorus@todorus.com"
+}

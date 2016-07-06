@@ -1,0 +1,29 @@
+{
+  "name": "zorgkaart",
+  "version": "0.0.1",
+  "description": "A Serverless Project and its Serverless Plugin dependencies.",
+  "author": "me",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/"
+  },
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha --reporter spec --recursive"
+  },
+  "dependencies": {
+    "node-neo4j": "^2.0.3",
+    "q": "^1.4.1",
+    "serverless": "^0.5.3",
+    "serverless-lambda-prune-plugin": "^1.1.0",
+    "turf": "^2.0.2"
+  },
+  "devDependencies": {
+    "expect": "^1.14.0",
+    "mocha": "^2.4.5",
+    "neo4ji": "0.0.10",
+    "sequelize-cli": "^2.3.1",
+    "sinon": "^1.17.3"
+  }
+}
